@@ -45,12 +45,8 @@ const styles = StyleSheet.create({
         width: wp(100),
         height: hp(40),
         borderWidth: 2,
-        // borderColor: 'black',
         borderColor: '#F5F5F5',
-        // position: 'absolute',
-        // bottom: 0,
-        // left: 0,
-        // right: 0,
+        backgroundColor: 'white'
     },
     topButtons: {
         flexDirection: 'row',

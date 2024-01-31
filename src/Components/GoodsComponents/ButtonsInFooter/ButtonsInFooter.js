@@ -14,11 +14,15 @@ const ButtonsInFooter = () => {
             <TouchableOpacity>
                 <CartSvg/>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <AccountSvg/>
-            </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => {
+                navigation.navigate('InfoPage')
+            }}>
                 <MenuSvg/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => {
+                navigation.navigate('InfoPage')
+            }}>
+                <AccountSvg/>
             </TouchableOpacity>
         </View>
     )

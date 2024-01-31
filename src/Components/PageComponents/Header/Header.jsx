@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: '100%',
         columnGap: 55,
-        paddingBottom: 12
+        paddingBottom: 12,
+        backgroundColor: 'white'
     },
     block: {
         height: 40,
@@ -70,7 +71,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        columnGap: 24
+        columnGap: 24,
+        backgroundColor: 'white'
     }
 })
 
