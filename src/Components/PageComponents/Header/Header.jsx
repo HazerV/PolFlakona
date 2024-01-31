@@ -4,6 +4,7 @@ import HeaderSvg from '../../../../assets/images/Header.svg'
 import Search from '../../../../assets/icons/HeaderIcons/Search.svg'
 import Navigation from '../../../../assets/icons/HeaderIcons/Navigation.svg'
 import {config} from "../../../../config";
+import ButtonComponents from "../../GoodsComponents/ButtonComponent/ButtonComponents";
 
 const Header = ({city}) => {
 
@@ -28,26 +29,9 @@ const Header = ({city}) => {
                     </View>
                 </TouchableOpacity>
             </View>
-            <View style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                columnGap: 24
-            }}>
-                <TouchableOpacity>
-                    <View style={styles.block}>
-                        <Text style={styles.boldText}>
-                            Оплата
-                        </Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <View style={styles.block}>
-                        <Text style={styles.boldText}>
-                            Доставка
-                        </Text>
-                    </View>
-                </TouchableOpacity>
+            <View style={styles.lowBlock}>
+                <ButtonComponents text={'Оплата'} />
+                <ButtonComponents text={'Доставка'}/>
             </View>
         </View>
     )
@@ -57,7 +41,6 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         paddingTop: 32,
-        // alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
         columnGap: 55,
@@ -67,7 +50,6 @@ const styles = StyleSheet.create({
         height: 40,
         width: 88,
         backgroundColor: '#F5F5F5',
-        // borderWidth: 2,
         borderRadius: 8,
         flexDirection: 'row',
         justifyContent: 'center',
@@ -83,6 +65,12 @@ const styles = StyleSheet.create({
         fontSize: config.fontMedium,
         lineHeight: config.lineMedium,
         fontFamily: config.familyBold
+    },
+    lowBlock: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        columnGap: 24
     }
 })
 

@@ -1,4 +1,4 @@
-import HomePage from "../src/Pages/HomePage";
+import HomePage from "../src/Pages/HomePage/HomePage";
 
 export default {
     "Home": HomePage
