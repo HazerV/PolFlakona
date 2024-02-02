@@ -5,6 +5,8 @@ import Search from '../../../../assets/icons/HeaderIcons/Search.svg'
 import Navigation from '../../../../assets/icons/HeaderIcons/Navigation.svg'
 import {config} from "../../../../config";
 import ButtonComponents from "../../GoodsComponents/ButtonComponent/ButtonComponents";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from "react-native-responsive-screen";
+
 
 const Header = ({city}) => {
 
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         paddingTop: 32,
         justifyContent: 'center',
-        width: '100%',
+        width: wp(100),
         columnGap: 55,
         paddingBottom: 12,
         backgroundColor: 'white'

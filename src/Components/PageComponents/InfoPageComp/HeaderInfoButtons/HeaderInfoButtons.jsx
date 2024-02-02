@@ -1,8 +1,8 @@
 import React from "react";
 import {View, StyleSheet, TouchableOpacity} from "react-native";
-import ArrowSvg from '../../../../assets/icons/HeaderIcons/BackArrowBlack.svg'
+import ArrowSvg from '../../../../../assets/icons/HeaderIcons/BackArrowBlack.svg'
 import {useNavigation} from "@react-navigation/native";
-import MoonSvg from '../../../../assets/icons/HeaderIcons/Moon.svg'
+import MoonSvg from '../../../../../assets/icons/HeaderIcons/Moon.svg'
 
 function GoBack() {
 

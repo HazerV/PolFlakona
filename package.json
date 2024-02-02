@@ -26,7 +26,8 @@
     "react-native-responsive-sizes": "^1.5.3",
     "react-native-size-matters": "^0.4.2",
     "react-native-svg": "14.1.0",
-    "react-native-svg-transformer": "^1.3.0"
+    "react-native-svg-transformer": "^1.3.0",
+    "expo-screen-orientation": "~6.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

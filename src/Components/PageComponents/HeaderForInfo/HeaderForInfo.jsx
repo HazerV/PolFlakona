@@ -1,7 +1,7 @@
 import React from "react";
 import {View, StyleSheet, Text} from "react-native";
 import Header from '../../../../assets/images/Header.svg'
-import {GoBack, SwitchTheme} from "../../GoodsComponents/HeaderInfoButtons/HeaderInfoButtons";
+import {GoBack, SwitchTheme} from "../InfoPageComp/HeaderInfoButtons/HeaderInfoButtons";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from "react-native-responsive-screen";
 import {config} from "../../../../config";
 
@@ -53,10 +53,11 @@ const styles = StyleSheet.create({
         width: wp(100),
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
-        columnGap: wp(30),
+        justifyContent: 'space-between',
+        padding: 10,
+        // columnGap: wp(30),
         paddingTop: 32,
-        paddingBottom: 12
+        paddingBottom: 12,
     },
     upText: {
         fontSize: config.fontMedium,

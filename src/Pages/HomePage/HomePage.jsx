@@ -19,11 +19,14 @@ import ArrowSvg from '../../../assets/icons/Arrow.svg'
 import Footer from "../../Components/PageComponents/Footer/Footer";
 import Parfum from '../../../assets/images/Parfum.png'
 import Productitem from "../../Components/GoodsComponents/Productitem/Productitem";
+import {useNavigation} from "@react-navigation/native";
 
 const HomePage = () => {
 
     // const {theme, setTheme} = useContext(ThemeContext)
     // const dynamicStyles = {}
+    const navigation = useNavigation()
+
 
     return (
         <SafeAreaView>
@@ -49,12 +52,12 @@ const HomePage = () => {
                                 </Text>
                                 <View style={styles.allArrow}>
                                     <Pressable hitSlop={20} onPress={() => console.log('a')}>
-                                    <Text style={styles.textCommon}>
-                                        Все
-                                    </Text>
+                                        <Text style={styles.textCommon}>
+                                            Все
+                                        </Text>
                                     </Pressable>
                                     <View style={{paddingTop: 5}}>
-                                    <ArrowSvg/>
+                                        <ArrowSvg/>
                                     </View>
                                 </View>
                             </View>
@@ -70,14 +73,39 @@ const HomePage = () => {
                                 </View>
                             </ScrollView>
                         </View>
-                            <Text style={styles.textCommon}>
-                                Категории
-                            </Text>
+                        <Text style={styles.textCommon}>
+                            Категории
+                        </Text>
                         <View style={styles.categoryBlock}>
-                            <Image source={Parfum}/>
-                            <Image source={Parfum}/>
-                            <Image source={Parfum}/>
-                            <Image source={Parfum}/>
+                            <TouchableOpacity onPress={() => navigation.navigate('CategoryPage')}>
+                                <Image
+                                    style={{
+                                        width: wp(45.8),
+                                        height: wp(45.8)
+                                    }} source={Parfum}/>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('CategoryPage')}>
+                                <Image
+                                    style={{
+                                        width: wp(45.8),
+                                        height: wp(45.8)
+                                    }} source={Parfum}/>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('CategoryPage')}>
+                                <Image
+                                    style={{
+                                        width: wp(45.8),
+                                        height: wp(45.8)
+                                    }} source={Parfum}/>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('CategoryPage')}>
+                                <Image
+                                    style={{
+                                        width: wp(45.8),
+                                        height: wp(45.8)
+                                    }} source={Parfum}/>
+                            </TouchableOpacity>
+
                         </View>
                         <View>
                             <Text style={styles.textCommon}>
@@ -85,13 +113,18 @@ const HomePage = () => {
                             </Text>
                             <ScrollView
                                 horizontal={true}
-                                showsHorizontalScrollIndicator={false} >
+                                showsHorizontalScrollIndicator={false}>
                                 <View style={styles.commonBlock}>
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450} name={'Духи AMOUAGE Beach Hut (на распив)' } />
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450} name={'Духи AMOUAGE Beach Hut (на распив)' } />
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450} name={'Духи AMOUAGE Beach Hut (на распив)' } />
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450} name={'Духи AMOUAGE Beach Hut (на распив)' } />
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450} name={'Духи AMOUAGE Beach Hut (на распив)' } />
+                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
                                 </View>
                             </ScrollView>
                         </View>
@@ -133,7 +166,7 @@ const styles = StyleSheet.create({
     categoryBlock: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        gap: 20,
+        gap: wp(3.05),
         paddingBottom: 34
     },
     allArrow: {

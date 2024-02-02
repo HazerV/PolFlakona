@@ -29,7 +29,8 @@ const Navigation = () => {
             }}
         >
             <Stack.Navigator
-                screenOptions={{headerShown: false}} >
+                screenOptions={{headerShown: false}}
+            >
                 {
                     Object.keys(routes).map((name) => (
                         <Stack.Screen name={name}
