@@ -22,13 +22,12 @@ const ButtonComponents = ({text, route}) => {
 
 const styles = StyleSheet.create({
     container: {
-        height: 40,
-        width: 80,
+        height: wp(10.18),
+        width: wp(19.08),
         backgroundColor: '#F5F5F5',
         borderRadius: 8,
         flexDirection: 'row',
         justifyContent: 'center',
-        columnGap: 4,
         alignItems: 'center'
     },
     buttonText: {

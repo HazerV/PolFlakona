@@ -4,6 +4,9 @@ import {useNavigation} from "@react-navigation/native";
 import AccountSvg from '../../../../assets/icons/Footericons/account.svg'
 import MenuSvg from '../../../../assets/icons/Footericons/menu.svg'
 import CartSvg from '../../../../assets/icons/Footericons/cart.svg'
+import {config} from "../../../../config";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from "react-native-responsive-screen";
+
 
 const ButtonsInFooter = () => {
 
@@ -31,16 +34,16 @@ const ButtonsInFooter = () => {
 
 const styles = StyleSheet.create({
     container: {
-        width: 250,
-        height: 60,
-        backgroundColor: '#593780',
+        width: wp(64),
+        height: wp(15),
+        backgroundColor: config.accentColor,
         borderRadius: 16,
         borderWidth: 2,
         borderColor: '#E1E1E1',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        columnGap: 30
+        columnGap: wp(8)
     }
 })
 

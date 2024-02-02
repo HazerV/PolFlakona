@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     block: {
-        height: 40,
-        width: 88,
+        height: wp(10),
+        width: wp(22.39),
         backgroundColor: '#F5F5F5',
         borderRadius: 8,
         flexDirection: 'row',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        columnGap: 24,
+        columnGap: wp(3.05),
         backgroundColor: 'white'
     }
 })

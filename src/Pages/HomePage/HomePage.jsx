@@ -20,7 +20,7 @@ import Footer from "../../Components/PageComponents/Footer/Footer";
 import Parfum from '../../../assets/images/Parfum.png'
 import Productitem from "../../Components/GoodsComponents/Productitem/Productitem";
 import {useNavigation} from "@react-navigation/native";
-
+import ButtonsInFooter from "../../Components/GoodsComponents/ButtonsInFooter/ButtonsInFooter";
 const HomePage = () => {
 
     // const {theme, setTheme} = useContext(ThemeContext)
@@ -31,7 +31,7 @@ const HomePage = () => {
     return (
         <SafeAreaView>
             <ScrollView style={{
-                height: '100%',
+                // height: '100%',
             }}>
                 <Header city={'Оренбург'}/>
                 <View style={styles.container}>
@@ -56,7 +56,7 @@ const HomePage = () => {
                                             Все
                                         </Text>
                                     </Pressable>
-                                    <View style={{paddingTop: 5}}>
+                                    <View style={{paddingTop: wp(1)}}>
                                         <ArrowSvg/>
                                     </View>
                                 </View>
@@ -132,6 +132,7 @@ const HomePage = () => {
                     <Footer/>
                 </View>
             </ScrollView>
+            <ButtonsInFooter />
         </SafeAreaView>
     )
 }
@@ -144,21 +145,21 @@ const styles = StyleSheet.create({
     },
     mainBlock: {
         width: wp(95),
-        paddingBottom: 16,
-        paddingTop: 12
+        paddingBottom: wp(4.1),
+        paddingTop: wp(3.05)
     },
     sliderBox: {
         justifyContent: 'center',
         alignItems: 'center',
-        paddingBottom: 16
+        paddingBottom: wp(4.1)
     },
     commonBlock: {
-        columnGap: 12,
+        columnGap: wp(3.05),
         flexDirection: 'row',
-        paddingBottom: 16,
+        paddingBottom: wp(4.1),
     },
     textCommon: {
-        paddingBottom: 16,
+        paddingBottom: wp(4.1),
         fontFamily: config.familyBold,
         fontSize: config.fontLarge,
         lineHeight: config.lineLarge
@@ -167,14 +168,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         gap: wp(3.05),
-        paddingBottom: 34
+        paddingBottom: wp(8.7)
     },
     allArrow: {
         flexDirection: 'row',
-        columnGap: 4,
+        columnGap: 1,
         position: 'absolute',
         alignContent: 'center',
-        right: 2,
+        right: wp(0.5),
     },
 })
 

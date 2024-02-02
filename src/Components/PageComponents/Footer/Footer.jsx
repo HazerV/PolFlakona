@@ -6,7 +6,6 @@ import ButtonComponents from "../../GoodsComponents/ButtonComponent/ButtonCompon
 import UnderlineRouteText from "../../GoodsComponents/UnderlineRouteText/UnderlineRouteText";
 import ButtonsInFooter from "../../GoodsComponents/ButtonsInFooter/ButtonsInFooter";
 
-
 const Footer = () => {
 
     return (
@@ -32,7 +31,7 @@ const Footer = () => {
                     © 2023 – 2024. «Полфлакона». Все права защищены.
                 </Text>
             </View>
-            <View style={{alignSelf: 'center'}}>
+            <View style={{alignSelf: 'center', paddingTop: wp(5)}}>
                 <ButtonsInFooter />
             </View>
         </View>
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
         height: hp(40),
         borderWidth: 2,
         borderColor: '#F5F5F5',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     },
     topButtons: {
         flexDirection: 'row',
