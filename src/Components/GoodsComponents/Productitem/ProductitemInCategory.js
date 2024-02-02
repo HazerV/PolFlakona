@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, Image} from "react-native";
 import Example from '../../../../assets/images/RectangleEx.png'
 import {config} from "../../../../config";
 
-const Productitem = ({name, description, value, price, firstPrice}) => {
+const ProductitemInCategory = ({name, description, value, price, firstPrice}) => {
 
     return (
         <View style={styles.container}>
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Productitem
+export default ProductitemInCategory

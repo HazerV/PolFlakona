@@ -85,7 +85,11 @@ const InfoPage = () => {
                         justifyContent: 'center',
                         paddingBottom: 100
                     }}>
-                        <LogoSvg/>
+                        <View style={{
+                            paddingRight: wp(10)
+                        }}>
+                            <LogoSvg />
+                        </View>
                         <Text style={{
                             fontSize: config.fontMedium,
                             lineHeight: config.lineMedium,

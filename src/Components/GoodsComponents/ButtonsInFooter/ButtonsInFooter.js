@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        columnGap: wp(8)
+        columnGap: wp(8),
     }
 })
 

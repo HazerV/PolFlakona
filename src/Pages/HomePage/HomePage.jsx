@@ -18,7 +18,7 @@ import RectangleEx from '../../../assets/images/RectangleEx.svg'
 import ArrowSvg from '../../../assets/icons/Arrow.svg'
 import Footer from "../../Components/PageComponents/Footer/Footer";
 import Parfum from '../../../assets/images/Parfum.png'
-import Productitem from "../../Components/GoodsComponents/Productitem/Productitem";
+import ProductitemInCategory from "../../Components/GoodsComponents/Productitem/ProductitemInCategory";
 import {useNavigation} from "@react-navigation/native";
 import ButtonsInFooter from "../../Components/GoodsComponents/ButtonsInFooter/ButtonsInFooter";
 const HomePage = () => {
@@ -30,9 +30,7 @@ const HomePage = () => {
 
     return (
         <SafeAreaView>
-            <ScrollView style={{
-                // height: '100%',
-            }}>
+            <ScrollView showsVerticalScrollIndicator={false}>
                 <Header city={'Оренбург'}/>
                 <View style={styles.container}>
                     <View style={styles.mainBlock}>
@@ -115,16 +113,16 @@ const HomePage = () => {
                                 horizontal={true}
                                 showsHorizontalScrollIndicator={false}>
                                 <View style={styles.commonBlock}>
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
-                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
-                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
-                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
-                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
-                                    <Productitem description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
-                                                 name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <ProductitemInCategory description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                           name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <ProductitemInCategory description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                           name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <ProductitemInCategory description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                           name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <ProductitemInCategory description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                           name={'Духи AMOUAGE Beach Hut (на распив)'}/>
+                                    <ProductitemInCategory description={'Доступен от 3 мл'} price={'1890'} firstPrice={2450}
+                                                           name={'Духи AMOUAGE Beach Hut (на распив)'}/>
                                 </View>
                             </ScrollView>
                         </View>
@@ -132,7 +130,16 @@ const HomePage = () => {
                     <Footer/>
                 </View>
             </ScrollView>
-            <ButtonsInFooter />
+            <View style={{
+                position: 'absolute',
+                bottom: 0,
+                alignItems: 'center',
+                left: 0,
+                right: 0,
+                paddingBottom: wp(5)
+            }}>
+                <ButtonsInFooter />
+            </View>
         </SafeAreaView>
     )
 }

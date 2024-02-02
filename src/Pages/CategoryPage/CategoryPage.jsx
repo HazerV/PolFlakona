@@ -8,12 +8,16 @@ import PodCategoryButton from "../../Components/PageComponents/CategoryPageComp/
 import Footer from "../../Components/PageComponents/Footer/Footer";
 import Filtering from "../../Components/PageComponents/CategoryPageComp/Filtering/Filtering";
 import GoodsInCategory from "../../Components/GoodsComponents/GoodsInCategory/GoodsInCategory";
+import ButtonsInFooter from "../../Components/GoodsComponents/ButtonsInFooter/ButtonsInFooter";
+import FooterInfo from "../../Components/PageComponents/InfoPageComp/FooterInfo/FooterInfo";
 
 const CategoryPage = () => {
 
     return (
         <SafeAreaView>
-            <ScrollView style={{height: '100%', backgroundColor: 'white'}}>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                style={{height: '100%', backgroundColor: 'white'}}>
                 <CategoryHeader/>
                 <View style={styles.container}>
                     <View style={styles.description}>
@@ -39,17 +43,30 @@ const CategoryPage = () => {
                         <PodCategoryButton text={'Парфюм 7'}/>
                         <PodCategoryButton text={'Духи'}/>
                     </View>
-                    {/*<View style={{paddingLeft: wp(5)}}>*/}
-                    {/*</View>*/}
                     <Filtering />
                 </View>
                 <View style={styles.mainBlock}>
-                    <GoodsInCategory />
-                    <GoodsInCategory />
-                    <GoodsInCategory />
-                    <GoodsInCategory />
+                    <GoodsInCategory route={'ProductPage'} newPrice={1500} firstPrice={2100} description={'Доступен от 3 мл'} name={'Духи AMOUAGE Beach Hut (на распив)'  }/>
+                    <GoodsInCategory newPrice={1700} route={'ProductPage'} firstPrice={2100} description={'Доступен от 5 мл'} name={'Духи AMOUAGE Beach Hut (на распив)'  }/>
+                    <GoodsInCategory newPrice={1800} firstPrice={2100} route={'ProductPage'} description={'Доступен от 7 мл'} name={'Духи AMOUAGE Beach Hut (на распив)'  }/>
+                    <GoodsInCategory newPrice={1100} firstPrice={1900} route={'ProductPage'} description={'Доступен от 3 мл'} name={'Духи AMOUAGE Beach Hut (на распив)'  }/>
+                    <GoodsInCategory newPrice={1500} firstPrice={2100} description={'Доступен от 3 мл'} name={'Духи AMOUAGE Beach Hut (на распив)'  }/>
+                    <GoodsInCategory newPrice={1700} firstPrice={2100} description={'Доступен от 5 мл'} name={'Духи AMOUAGE Beach Hut (на распив)'  }/>
+                    <GoodsInCategory newPrice={1800} firstPrice={2100} description={'Доступен от 7 мл'} name={'Духи AMOUAGE Beach Hut (на распив)'  }/>
+                    <GoodsInCategory newPrice={1100} firstPrice={1900} description={'Доступен от 3 мл'} name={'Духи AMOUAGE Beach Hut (на распив)'  }/>
                 </View>
+                <Footer />
             </ScrollView>
+            <View style={{
+                position: 'absolute',
+                bottom: 0,
+                alignItems: 'center',
+                left: 0,
+                right: 0,
+                paddingBottom: wp(5)
+            }}>
+                <ButtonsInFooter />
+            </View>
         </SafeAreaView>
     )
 
@@ -65,7 +82,8 @@ const styles = StyleSheet.create({
         paddingLeft: wp(2.5),
         flexDirection: 'row',
         flexWrap: 'wrap',
-        gap: wp(5),
+        columnGap: wp(5),
+        paddingBottom: 100
     },
     description: {
         width: wp(95),

@@ -1,5 +1,5 @@
 import React from "react";
-import {View, StyleSheet, Text, ScrollView} from "react-native";
+import {View, StyleSheet, Text, ScrollView, TouchableOpacity} from "react-native";
 import {config} from "../../../../../config";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from "react-native-responsive-screen";
 import TrashSvg from '../../../../../assets/icons/Trash 3.svg'
@@ -9,16 +9,18 @@ const Filtering = () => {
 
     return (
         <View style={{flexDirection: 'row', paddingLeft: wp(2.5)}}>
-            <View style={{
-                width: wp(10),
-                height: wp(10),
-                borderRadius: 8,
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: config.backgroundIcons
-            }}>
-                <TrashSvg />
-            </View>
+            <TouchableOpacity>
+                <View style={{
+                    width: wp(10),
+                    height: wp(10),
+                    borderRadius: 8,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: config.backgroundIcons
+                }}>
+                    <TrashSvg/>
+                </View>
+            </TouchableOpacity>
             <ScrollView
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}>
