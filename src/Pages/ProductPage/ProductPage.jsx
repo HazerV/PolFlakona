@@ -35,7 +35,63 @@ const ProductPage = ({id}) => {
                         </View>
                     </ScrollView>
                     <ChooseValue/>
-                    <View>
+                    <View style={styles.descBlock}>
+                        <Text style={styles.descriptionHead}>
+                            Описание
+                        </Text>
+                        <Text style={styles.descriptionText}>
+                            Carbone de Balmain Eau de Toilette Balmain (в России известен как «Бальман Карбон»), выпущенный в 2010 году, классифицируется как аромат для мужчин и принадлежит семействам Пряные и Древесные.
+                        </Text>
+                    </View>
+                    <View style={{paddingBottom: wp(6)}}>
+                        <Text style={styles.descriptionHead}>
+                            Ноты
+                        </Text>
+                        <Text style={styles.descriptionText}>
+                            Композицию составляют следующие ноты и аккорды: Бензоин, Благовония, Бурбон, Элеми, Инжир, Лист фиалки, Мускус, Плющ и Ветивер.
+                        </Text>
+                    </View>
+                    <View style={{paddingBottom: wp(4)}}>
+                        <Text style={{
+                            paddingBottom: wp(2),
+                            fontSize: config.fontMedium,
+                            lineHeight: config.lineMedium,
+                            fontFamily: config.familyBold
+                        }}>
+                            Характеристики:
+                        </Text>
+                        <View style={{
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                            columnGap: wp(1),
+
+                        }}>
+                            <Text style={{
+                                fontSize: config.fontMedium,
+                                lineHeight: config.lineMedium,
+                                fontFamily: config.familyRegular
+                            }}>
+                                Бренд
+                            </Text>
+                            <View style={{
+                                borderWidth: 2,
+                                borderTopColor: 'white',
+                                borderLeftColor: 'white',
+                                borderRightColor: 'white',
+                                borderBottomColor: '#CCCCCC',
+                                width: wp(65)
+                            }}>
+                            </View>
+                            <Text style={{
+                                fontSize: config.fontMedium,
+                                lineHeight: config.lineMedium,
+                                fontFamily: config.familyRegular,
+
+                            }}>
+                                Bruno Banani
+
+                            </Text>
+                        </View>
 
                     </View>
                 </View>
@@ -59,6 +115,7 @@ const styles = StyleSheet.create({
     container: {
         paddingLeft: wp(2.5),
         backgroundColor: 'white',
+        paddingBottom: 250
     },
     image: {
         resizeMode: 'cover',
@@ -80,6 +137,21 @@ const styles = StyleSheet.create({
         lineHeight: config.lineLarge,
         paddingBottom: wp(4),
         paddingTop: wp(4)
+    },
+    descBlock: {
+        paddingTop: wp(6),
+        paddingBottom: wp(6)
+    },
+    descriptionHead: {
+        fontSize: config.fontMedium,
+        fontFamily: config.familyBold,
+        lineHeight: config.lineMedium,
+        paddingBottom: wp(2)
+    },
+    descriptionText: {
+        fontSize: config.fontMedium,
+        fontFamily: config.familyRegular,
+        lineHeight: config.lineMedium
     }
 })
 
