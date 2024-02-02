@@ -36,11 +36,7 @@ const HomePage = () => {
                     <View style={styles.mainBlock}>
                         <View style={styles.sliderBox}>
                             <Image
-                                style={{
-                                    resizeMode: 'contain',
-                                    height: hp(30),
-                                    width: wp(95)
-                                }}
+                                style={styles.imageInSlider}
                                 source={SliderBox}/>
                         </View>
                         <View>
@@ -159,6 +155,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingBottom: wp(4.1)
+    },
+    imageInSlider: {
+        resizeMode: 'contain',
+        height: hp(30),
+        width: wp(95)
     },
     commonBlock: {
         columnGap: wp(3.05),

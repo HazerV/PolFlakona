@@ -4,10 +4,12 @@ import {config} from "../../../../config";
 import {widthPercentageToDP as wp} from "react-native-responsive-screen";
 import AvailableValues from "./AvailableValues";
 import {ValueContext} from "../../../Context/context";
+import Counter from "./Counter";
 
 const ChooseValue = ({id}) => {
 
     const {value} = useContext(ValueContext)
+    const price = 5000
 
     return (
         <View style={styles.container}>
@@ -21,6 +23,17 @@ const ChooseValue = ({id}) => {
                     <AvailableValues count={15}/>
                     <AvailableValues count={30}/>
                 </View>
+                <View style={{flexDirection: 'row', columnGap: wp(3) }}>
+                    <Counter />
+                    <View style={{flexDirection: 'column', justifyContent: 'center' }}>
+                        <Text style={styles.textPrice}>
+                            {price} руб
+                        </Text>
+                        <Text style={styles.textValue}>
+                            {value} мл
+                        </Text>
+                    </View>
+                </View>
             </View>
         </View>
     )
@@ -29,23 +42,36 @@ const ChooseValue = ({id}) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: config.backgroundIcons,
-        borderRadius: 8,
-        width: wp(372),
-        height: wp(43)
+        borderRadius: 16,
+        width: wp(95),
+        height: wp(43),
+        justifyContent: 'center'
     },
     values: {
         flexDirection: 'row',
-        columnGap: wp(2)
+        columnGap: wp(2),
+        paddingBottom: wp(3),
     },
     elements: {
         padding: wp(4),
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
     chooseText: {
         fontSize: config.fontMedium,
         fontFamily: config.familyBold,
         lineHeight: config.lineMedium,
         paddingBottom: wp(2)
+    },
+    textPrice: {
+        fontSize: config.fontLarge,
+        fontFamily: config.familyBold,
+        lineHeight: config.lineLarge
+    },
+    textValue: {
+        fontSize: config.fontMedium,
+        fontFamily: config.familyRegular,
+        lineHeight: config.lineMedium,
+        color: '#474747'
     }
 })
 

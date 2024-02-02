@@ -20,7 +20,7 @@ const AvailableValues = ({count}) => {
                 borderColor: dynamicStyles.borderColor
             }]}>
                 <Text style={styles.text}>
-                    {count}
+                    {count} мл
                 </Text>
             </View>
         </TouchableOpacity>
